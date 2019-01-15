@@ -37,8 +37,17 @@ pause;
 
 D1 = C.^ .25 ; 
 D2 = C.^ 1.25;
-figure, imshowpair(D1, D2, 'montage');
 
+figure;
+subplot(2,1,1), imshow(D1);
+title(".25");
+subplot(2,1,2), imshow(D2);
+title("1.25");
+
+imwrite(D2, "charles_D2.jpg");
+
+disp("By raising all values to a value less than 1. we are reducing the intensity of the color, which is grayscale, becoming more white");
+disp("By raising all values to a value greater than 1. we are increasing the intensity of the color, which is grayscale, becoming more black");
 disp("---Finish Solving Problem 5---"); 
 pause;
 
@@ -57,7 +66,11 @@ end
 
 bw2 = im2bw(C, .3);
 
-figure, imshowpair(bw1, bw2, 'montage');
+figure; 
+subplot(1,2,1), imshow(bw1);
+title("matlab method");
+subplot(1,2,2), imshow(bw2);
+title("my method");
 disp("My method worked");
 
 disp("---Finish Solving Problem 6---"); 
@@ -65,3 +78,9 @@ pause;
 
 close all;
 clear all;
+
+function [output] = ReduceGrayScale(input)
+%REDUCEGRAYSCALE Reduces Gray Scale
+    output = input.^.25;
+end
+
