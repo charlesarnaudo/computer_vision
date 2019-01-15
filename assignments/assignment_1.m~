@@ -57,8 +57,7 @@ end
 
 bw2 = im2bw(C, .3);
 
-figure, imshowpair(bw1, bw2, 'montage');
-disp("My method worked");
+figure, imshowpair(bw1, bw2
 
 disp("---Finish Solving Problem 6---"); 
 pause;
