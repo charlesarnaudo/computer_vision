@@ -5,14 +5,14 @@
 %}
 clear all;
 
-disp("---Finish Solving Problem 1---"); 
+disp("---Finish Solving Problem 1---");
 pause;
 
 A = imread("peppers.bmp");
 figure, imshow(A);
 title("RGB Original Image");
 
-disp("---Finish Solving Problem 2---"); 
+disp("---Finish Solving Problem 2---");
 pause;
 
 B = rgb2gray(A);
@@ -25,17 +25,17 @@ disp(min(B));
 disp(mean(B));
 disp(median(B));
 
-disp("---Finish Solving Problem 3---"); 
+disp("---Finish Solving Problem 3---");
 pause;
 
 C = B;
 figure, imshow(C);
 title("Normalized Gray Scale Image");
 
-disp("---Finish Solving Problem 4---"); 
+disp("---Finish Solving Problem 4---");
 pause;
 
-D1 = C.^ .25 ; 
+D1 = C.^ .25 ;
 D2 = C.^ 1.25;
 
 figure;
@@ -48,7 +48,8 @@ imwrite(D2, "charles_D2.jpg");
 
 disp("By raising all values to a value less than 1. we are reducing the intensity of the color, which is grayscale, becoming more white");
 disp("By raising all values to a value greater than 1. we are increasing the intensity of the color, which is grayscale, becoming more black");
-disp("---Finish Solving Problem 5---"); 
+
+disp("---Finish Solving Problem 5---");
 pause;
 
 bw1 = C;
@@ -66,14 +67,14 @@ end
 
 bw2 = im2bw(C, .3);
 
-figure; 
+figure;
 subplot(1,2,1), imshow(bw1);
 title("matlab method");
 subplot(1,2,2), imshow(bw2);
 title("my method");
 disp("My method worked");
 
-disp("---Finish Solving Problem 6---"); 
+disp("---Finish Solving Problem 6---");
 pause;
 
 close all;
