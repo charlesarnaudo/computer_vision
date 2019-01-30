@@ -115,3 +115,8 @@
 % C = imerode(A, se);
 % imshow(C);
 % title("Disk r=20");
+
+% disp("---Finish Solving Problem 4---");
+% pause;
+close all;
+clear all;
